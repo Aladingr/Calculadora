@@ -17,24 +17,48 @@ class CalculatorController extends Controller
             if($operador=='+'){
               $result = self::suma($num1,$num2);
 
-            } /*elseif($operador=='-'){
-                $resultado= $num1-$num2;
+            } elseif($operador=='-'){
+                $result = self::resta($num1,$num2);
 
             } elseif($operador=='*'){
-                $resultado= $num1*$num2;
+                $result = self::mult($num1,$num2);
 
             } elseif($operador=='/'){
-                $resultado= $num1/$num2;
+                $result = self::div($num1,$num2);
            
             } elseif($operador=='nraiz'){
-                $resultado= pow($num1,(1/$num2));
+                $result = self::raiz($num1,$num2);
 
-            }*/
+            }
                     
        return view('calcular', ['resultado' => $result ]);
        
     }
     public static function suma($num1,$num2){
+        $resultado= $num1+$num2;
+        return $resultado;
+
+    }
+
+    public static function resta($num1,$num2){
+        $resultado= $num1-$num2;
+        return $resultado;
+
+    }
+
+    public static function mult($num1,$num2){
+        $resultado= $num1*$num2;
+        return $resultado;
+
+    }
+
+    public static function div($num1,$num2){
+        $resultado= pow($num1,(1/$num2));
+        return $resultado;
+
+    }
+
+    public static function raiz($num1,$num2){
         $resultado= $num1+$num2;
         return $resultado;
 
