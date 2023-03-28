@@ -43,6 +43,7 @@
                                     <option value="-">-</option>
                                     <option value="*">*</option>
                                     <option value="/">/</option>
+                                    <option value="nraiz">√</option>
                                 </select>
                             </div>
                             <div class="form-group">
