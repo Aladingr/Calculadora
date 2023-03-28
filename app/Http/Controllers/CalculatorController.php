@@ -12,11 +12,12 @@ class CalculatorController extends Controller
         $num2 = $request->input('num2');
         $operador = $request->input('operator');
         $resultado = "";
+        $result ="";
 
             if($operador=='+'){
-                $resultado= $num1+$num2;
+              $result = self::suma($num1,$num2);
 
-            } elseif($operador=='-'){
+            } /*elseif($operador=='-'){
                 $resultado= $num1-$num2;
 
             } elseif($operador=='*'){
@@ -24,12 +25,19 @@ class CalculatorController extends Controller
 
             } elseif($operador=='/'){
                 $resultado= $num1/$num2;
+           
+            } elseif($operador=='nraiz'){
+                $resultado= pow($num1,(1/$num2));
 
-            }
-
-        
-       return view('calcular', ['resultado' => $resultado ]);
+            }*/
+                    
+       return view('calcular', ['resultado' => $result ]);
        
+    }
+    public static function suma($num1,$num2){
+        $resultado= $num1+$num2;
+        return $resultado;
+
     }
     
 }
