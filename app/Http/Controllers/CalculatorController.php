@@ -53,13 +53,13 @@ class CalculatorController extends Controller
     }
 
     public static function div($num1,$num2){
-        $resultado= pow($num1,(1/$num2));
+        $resultado= $num1/$num2;
         return $resultado;
 
     }
 
     public static function raiz($num1,$num2){
-        $resultado= $num1+$num2;
+        $resultado= pow($num1,(1/$num2));
         return $resultado;
 
     }

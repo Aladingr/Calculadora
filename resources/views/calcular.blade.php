@@ -26,7 +26,7 @@
                         CALCULADORA
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('/procesar') }}">  
+                        <form method="POST" action="{{ route('procesar') }}">  
                             @csrf
                             <div class="form-group">
                                 <label for="num1">NUMERO 1:</label>
