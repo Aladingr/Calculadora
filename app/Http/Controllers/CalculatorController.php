@@ -14,22 +14,31 @@ class CalculatorController extends Controller
         $resultado = "";
         $result ="";
 
-            if($operador=='+'){
-              $result = self::suma($num1,$num2);
+            switch ($operador) {
+                case '+':
+                    $result = self::suma($num1,$num2);
+                    break;
 
-            } elseif($operador=='-'){
-                $result = self::resta($num1,$num2);
+                case '-':
+                    $result = self::resta($num1,$num2);
+                    break;
+                        
+                case '*':
+                    $result = self::mult($num1,$num2);
+                    break;
+                case '/':
+                    $result = self::div($num1,$num2);
+                    break;
 
-            } elseif($operador=='*'){
-                $result = self::mult($num1,$num2);
+                case '√':
+                    $result = self::raiz($num1,$num2);
+                    break;
 
-            } elseif($operador=='/'){
-                $result = self::div($num1,$num2);
-           
-            } elseif($operador=='nraiz'){
-                $result = self::raiz($num1,$num2);
-
+                default:
+                    # code...
+                    break;
             }
+            
                     
        return view('calcular', ['resultado' => $result ]);
        
